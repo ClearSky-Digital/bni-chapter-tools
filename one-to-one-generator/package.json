@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
+  "author": "ClearSky Digital LLC (https://cscloud.digital)",
+  "homepage": "https://github.com/ClearSky-Digital/bni-chapter-tools",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

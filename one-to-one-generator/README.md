@@ -1,5 +1,7 @@
 # BNI 1-to-1 Matcher
 
+Built and maintained by [ClearSky Digital](https://cscloud.digital).
+
 A free tool for BNI chapters, made by a member for anyone to use, because givers gain. It is independent and not made or endorsed by BNI.
 
 There are two parts:
@@ -84,4 +86,4 @@ Node 24 or newer is required (the roster store uses the built-in `node:sqlite`).
 
 ## License
 
-MIT, copyright 2026 ClearSky Digital LLC. See the LICENSE file at the repository root.
+MIT, copyright 2026 [ClearSky Digital LLC](https://cscloud.digital). See the LICENSE file at the repository root.
