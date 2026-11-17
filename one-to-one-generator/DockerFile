@@ -21,6 +21,11 @@ RUN npm run build
 
 # 4. Production Runner Stage
 FROM base AS runner
+LABEL org.opencontainers.image.source="https://github.com/ClearSky-Digital/bni-chapter-tools"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.vendor="ClearSky Digital LLC"
+LABEL org.opencontainers.image.url="https://cscloud.digital"
+LABEL org.opencontainers.image.description="BNI 1-to-1 matcher with a leadership roster and a scheduled match email."
 WORKDIR /app
 
 ENV NODE_ENV=production

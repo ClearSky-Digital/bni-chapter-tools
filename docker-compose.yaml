@@ -1,6 +1,6 @@
 services:
   bni-matcher:
-    image: ghcr.io/gcollins808/121generator:latest
+    image: ghcr.io/clearsky-digital/bni-chapter-tools:latest
     container_name: bni_chapter_tools
     restart: unless-stopped
     # Expose internally to the Docker network without binding to host ports:

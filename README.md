@@ -23,13 +23,19 @@ A free 1-to-1 matcher for BNI chapters. It pairs members for their one-to-one me
 
 You need Docker and Node 24 or newer (only if you build from source).
 
-1. Build the image from this folder:
+1. Pull the published image:
+
+   ```
+   docker pull ghcr.io/clearsky-digital/bni-chapter-tools:latest
+   ```
+
+   Or build your own from this folder:
 
    ```
    docker build -f one-to-one-generator/DockerFile -t bni-chapter-tools one-to-one-generator
    ```
 
-2. In `docker-compose.yaml`, set `image:` to `bni-chapter-tools`. The file expects an existing Docker network named `publictools`; create it with `docker network create publictools` or change the name to match yours.
+2. If you built your own, set `image:` in `docker-compose.yaml` to `bni-chapter-tools`. The file expects an existing Docker network named `publictools`; create it with `docker network create publictools` or change the name to match yours.
 3. Copy `one-to-one-generator/.env.example` to `.env` next to `docker-compose.yaml` and fill in your own values.
 4. Start it:
 
