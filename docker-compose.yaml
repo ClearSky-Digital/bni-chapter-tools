@@ -1,0 +1,39 @@
+services:
+  bni-matcher:
+    image: ghcr.io/gcollins808/121generator:latest
+    container_name: bni_chapter_tools
+    restart: unless-stopped
+    # Expose internally to the Docker network without binding to host ports:
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - BNI_STATE_DIR=/app/state
+      # Passed through from the VPS environment or its .env file (see one-to-one-generator/.env.example). No values live in this file.
+      - AUTOMATION_ENABLED
+      - DRY_RUN
+      - MATCH_TO
+      - LEADERSHIP_EMAILS
+      - RESEND_API_KEY
+      - CONTACT_FORM_SENDER
+      - CRON_SECRET
+      - SESSION_SECRET
+      - TRUSTED_PROXY_HOPS
+      - BNI_SCHEDULE
+      - BNI_ANCHOR_DATE
+      - BNI_ROUND_DAYS
+      - HISTORY_ROUNDS
+      - ROSTER_STALE_DAYS
+      - TOOL_URL
+    volumes:
+      - bni_state:/app/state
+    networks:
+      - publictools
+
+volumes:
+  bni_state:
+
+networks:
+  publictools:
+    external: true
